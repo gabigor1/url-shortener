@@ -1,16 +1,32 @@
 .App {
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
 }
 
-.index-wrapper {
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1em;
+}
 
+.input-wrapper {
+  display: flex;
+}
+
+.index-wrapper {
+  background-color: whitesmoke;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .table {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  text-align: center;
+  margin-bottom: 0.5em;
 }
 
 .row {
@@ -18,11 +34,16 @@
   grid-template-columns: repeat(4, 1fr);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.clicks {
+  text-align: center;
 }
+
+.row a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.row button {
+  width: 40%;
+}
+

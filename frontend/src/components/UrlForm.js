@@ -20,17 +20,19 @@ function UrlForm(){
 
   return (
     <>
-    <div>
+    <div className="form-wrapper">
       <h1>Url-Shortener</h1>
+      <div className="input-wrapper">
         <div>
           <input onChange={(event) => setOriginalUrl(event.target.value)} placeholder="" className="create-input"></input>
         </div>
         <div><button onClick={handleSubmit}>CREATE</button></div>
-      {shortedUrl && (
-        <a href={shortedUrl}></a>
-      )}
       </div>
-      <UrlIndex />
+        {shortedUrl && (
+          <a href={shortedUrl}></a>
+        )}
+    </div>
+    <UrlIndex />
     </>
   );
 }
