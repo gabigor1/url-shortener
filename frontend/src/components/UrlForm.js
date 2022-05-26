@@ -10,7 +10,7 @@ function UrlForm(){
     setShortedUrl(null)
     try {
       const res = await axios.post(`http://localhost:5000/shorted`, { originalUrl });
-      console.log(res);
+      console.log(res.data.shortedUrl);
       setShortedUrl(res.data)
     } catch (err) {
       console.log(err);
@@ -28,9 +28,9 @@ function UrlForm(){
         </div>
         <div><button onClick={handleSubmit}>CREATE</button></div>
       </div>
-        {shortedUrl && (
-          <a href={shortedUrl}></a>
-        )}
+      {shortedUrl && (
+        <a href={shortedUrl.shortedUrl}>{shortedUrl.shortedUrl}</a>
+      )}
     </div>
     <UrlIndex />
     </>
