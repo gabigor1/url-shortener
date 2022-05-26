@@ -24,7 +24,7 @@ function UrlForm(){
       <h1>Url-Shortener</h1>
       <div className="input-wrapper">
         <div>
-          <input onChange={(event) => setOriginalUrl(event.target.value)} placeholder="" className="create-input"></input>
+          <input onChange={(event) => setOriginalUrl(event.target.value)} placeholder="Place your URL" className="create-input"></input>
         </div>
         <div><button onClick={handleSubmit}>CREATE</button></div>
       </div>
