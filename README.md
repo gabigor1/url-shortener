@@ -6,4 +6,4 @@ At the folder url-shortener execute `npm i` to install all dependecies, after th
 
 ## Set up Frontend
 
-At the folder client execute `npm i` to install all dependecies, after that to run the client `npm run start`. It should open a window on the broser showing the app.
+At the folder frontend execute `npm i` to install all dependecies, after that to run the client `npm run start`. It should open a window on the broser showing the app.
