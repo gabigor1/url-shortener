@@ -9,7 +9,7 @@ function UrlForm(){
   const handleSubmit = async () => {
     setShortedUrl(null)
     try {
-      const res = await axios.post(`http://localhost:5000/shorted`, originalUrl);
+      const res = await axios.post(`http://localhost:5000/shorted`, { originalUrl });
       console.log(res);
       setShortedUrl(res.data)
     } catch (err) {
@@ -17,15 +17,15 @@ function UrlForm(){
     };
   }
 
+
   return (
     <>
     <div>
-      <form onSubmit={handleSubmit}>
+      <h1>Url-Shortener</h1>
         <div>
-          <input placeholder="" className="create-input"></input>
+          <input onChange={(event) => setOriginalUrl(event.target.value)} placeholder="" className="create-input"></input>
         </div>
-        <div><button>CREATE</button></div>
-      </form>
+        <div><button onClick={handleSubmit}>CREATE</button></div>
       {shortedUrl && (
         <a href={shortedUrl}></a>
       )}
